@@ -70,8 +70,6 @@ export const updateUser = async (req, res, next) => {
 
 //user book operations
 
-
-
 export const createReadingList = async (req, res) => {
   const { userId } = req.params;
   const { bookIds } = req.body;
