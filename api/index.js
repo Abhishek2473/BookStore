@@ -4,10 +4,11 @@ import cookieParser from "cookie-parser";
 import authRouter from './routes/auth.route.js'
 import bookRouter from './routes/book.route.js'
 import userRouter from './routes/user.route.js'
-
+import cors from 'cors';
 import dotenv from 'dotenv';
 
 const app = express();
+app.use(cors())
 const port = 4000;
 
 mongoose.connect('mongodb+srv://abhishek:abhishek@bookshelf.lb9mkcb.mongodb.net/BookShelf')
@@ -16,6 +17,7 @@ mongoose.connect('mongodb+srv://abhishek:abhishek@bookshelf.lb9mkcb.mongodb.net/
 .catch((err)=>{console.log(err);});
 
 app.use(express.json());
+
 
 app.use(cookieParser())
 
