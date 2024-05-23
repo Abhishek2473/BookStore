@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import authRouter from './routes/auth.route.js'
 import bookRouter from './routes/book.route.js'
 import userRouter from './routes/user.route.js'
-import cors from 'cors';
+import cors from "cors"
 import dotenv from 'dotenv';
 
 const app = express();
