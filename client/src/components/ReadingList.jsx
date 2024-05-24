@@ -32,17 +32,17 @@ const ReadingList = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="max-w-7xl w-full bg-white shadow-lg rounded-lg p-8">
+      <div className="max-w-7xl w-full p-8">
         <h1 className="text-2xl font-bold mb-6 text-center">Reading List</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {readingList.map((book) => (
-            <div key={book._id} className="bg-gray-200 p-6 rounded-lg shadow-md">
+            <div key={book._id} className="bg-white p-4 rounded-lg shadow-md">
               <img className="h-48 w-full object-cover mb-4" src={book.image} alt={book.title} />
-              <div className="text-lg font-semibold text-black">{book.title}</div>
-              <p className="mt-2 text-gray-700">by {book.author}</p>
-              <p className="mt-2 text-gray-500">Published Date: {new Date(book.publishedDate).toDateString()}</p>
-              <p className="mt-2 text-gray-500">Pages: {book.pages}</p>
-              <div className="mt-4 text-sm text-indigo-500 font-semibold">Genre: {book.genre}</div>
+              <div className="text-base font-semibold text-black">{book.title}</div>
+              <p className="mt-2 text-sm text-gray-700">by {book.author}</p>
+              <p className="mt-2 text-sm text-gray-500">Published Date: {new Date(book.publishedDate).toDateString()}</p>
+              <p className="mt-2 text-sm text-gray-500">Pages: {book.pages}</p>
+              <div className="mt-2 text-xs text-indigo-500 font-semibold">Genre: {book.genre}</div>
             </div>
           ))}
         </div>
