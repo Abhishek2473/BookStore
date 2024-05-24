@@ -7,6 +7,7 @@ import Profile from './pages/Profile'
 import Home from './pages/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookForm from './components/BookForm'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
 
@@ -18,14 +19,13 @@ function App() {
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/bookform' element={<BookForm/>}/>
-        <Route path='/profile/:id' element={<Profile />} />
         <Route path='/about' element={<About />} />
-        {/* <Route path='/about' element={<About />} />
+         <Route path='/about' element={<About />} />
        
         <Route element={<PrivateRoute />}>
           
      
-        </Route> */}
+        </Route> 
       </Routes>
     </BrowserRouter>
   )
