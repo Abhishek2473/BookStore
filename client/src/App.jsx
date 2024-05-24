@@ -10,6 +10,7 @@ import BookDetails from './components/Book';
 import AllBooks from './components/AllBooks';
 import ReadingList from './components/ReadingList';
 import BookForm from './components/BookForm'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
 
@@ -25,14 +26,13 @@ function App() {
         <Route path="/reading/:userId" element={<ReadingList />} />
 
         <Route path='/bookform' element={<BookForm/>}/>
-        <Route path='/profile/:id' element={<Profile />} />
         <Route path='/about' element={<About />} />
-        {/* <Route path='/about' element={<About />} />
+         <Route path='/about' element={<About />} />
        
         <Route element={<PrivateRoute />}>
           
      
-        </Route> */}
+        </Route> 
       </Routes>
     </BrowserRouter>
   )
