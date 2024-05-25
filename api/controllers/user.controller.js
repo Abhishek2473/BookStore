@@ -6,8 +6,7 @@ import User from  '../models/user.model.js'
 // user profile operations
 
 export const updateUser = async (req, res, next) => {
-    if (req.user.id !== req.params.id)
-      return next(errorHandler(401, 'You can only update your own account!'));
+
     try {
       if (req.body.password) {
         req.body.password = bcryptjs.hashSync(req.body.password, 10);
@@ -36,8 +35,7 @@ export const updateUser = async (req, res, next) => {
 
 
   export const deleteUser = async (req, res, next) => {
-    if (req.user.id !== req.params.id)
-      return next(errorHandler(401, 'You can only delete your own account!'));
+
     try {
       await User.findByIdAndDelete(req.params.id);
       res.clearCookie('access_token');
